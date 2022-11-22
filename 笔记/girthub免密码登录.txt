@@ -1,0 +1,2 @@
+1. 头像->setting->SSH and GPG keys-> New SSH key
+2. 在C:\Users\ZSM\.ssh->右键Git Bash here ->输入 ssh-keygen -t rsa ->然后一路回车 ->用记事本打开id_rsa.pub文件->将内容复制到 github的Key输入框内->Add SHH key

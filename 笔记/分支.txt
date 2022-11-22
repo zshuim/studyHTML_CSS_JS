@@ -1,0 +1,7 @@
+1. git branch 列出所有本地分支
+2. git branch -r 列出所有远程分支
+3. git branch 分支名 创建分支，但依然停留在原分支
+4. git checkout -b 分支名 创建分支，但指向新分支
+5. git branch -d 分支名 删除分支
+6. git push origin --delete 分支名 删除远程分支
+7. git merge 分支名 合并分支

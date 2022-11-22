@@ -1,0 +1,9 @@
+1. git init  初始化本地仓库
+2. git status 查看文件状态
+    2.1 状态1 ：Untracked files 为跟踪的文件 颜色显示红色
+    
+    2.2 状态2 ：Changes to be committed 文件待提交状态 颜色显示绿色
+
+3. git add . 添加所有文件到暂存区
+4. git commit -m""  提交暂存区文件到本地仓库
+5. git push 将文件内容发布到本地仓库
