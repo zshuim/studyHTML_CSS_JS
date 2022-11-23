@@ -1,0 +1,36 @@
+<!-- 1-初识Promise.html -->
+<script>
+  function execCode(counter, successCallback, failureCallback) {
+    // 异步代码
+    setTimeout(() => {
+      if (counter > 0) {
+        let total = 0;
+        for (let i = 0; i <= counter; i++) {
+          total += 1;
+        }
+        successCallback(total);
+      } else {
+        failureCallback(`${counter}不能为负值`);
+      }
+    }, 3000);
+  }
+
+  execCode(
+    100,
+    (value) => {
+      console.log("成功了...:", value);
+    },
+    (err) => {
+      console.log(err);
+    }
+  );
+  execCode(
+    -100,
+    (value) => {
+      console.log("成功了...:", value);
+    },
+    (err) => {
+      console.log(err);
+    }
+  );
+</script>

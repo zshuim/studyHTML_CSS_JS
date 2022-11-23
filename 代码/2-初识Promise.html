@@ -1,0 +1,47 @@
+<!-- <script>
+//   在new Promise时，需要传递一个执行器，执行器是立即执行的
+//   刚创建出来的Promise是处于等待状态
+//   执行器函数有两个参数 一个指的是 resolve，另一个叫做 reject
+//   resolve 是一个函数，调用此函数，可以把等待状态的Promise变成成功的Promise
+//   reject 是一个函数，调用此函数，可以把等待状态的Promise变成失败的Promise
+//   Promise 三个状态：等待状态 成功状态 失败状态
+
+  //   在执行器中写异步代码
+  let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    //   console.log("我是一个定时器~");
+      resolve("成功~");
+      console.log(p);
+      
+    }, 3000);
+  });
+  // [[PromiseState]]:"pending" 等待的意思
+  console.log(p);
+</script> -->
+
+<!-- <script>
+  //   在执行器中写异步代码
+  let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    // 成功是成功的结果，叫终值
+      resolve("成功~");
+    //   Promise {<fulfilled>: '成功~'}
+      console.log(p);
+    }, 3000);
+  });
+  console.log(p);
+</script> -->
+
+<script>
+  //   在执行器中写异步代码
+  let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    // 失败是失败的结果，叫拒因
+      reject("失败~");
+    //   Promise {<rejected>: '失败~'}
+      console.log(p);
+    }, 3000);
+  });
+  console.log(p);
+</script>
+

@@ -1,0 +1,43 @@
+1. 在ES6中，提供了一个类，叫Promise，承诺的意思
+2. 在new Promise时，需要传递一个执行器，执行器是立即执行的
+3. Promise中只能有一个执行器，执行器不能有多个
+4. 刚创建出来的Promise是处于等待状态
+5. 执行器函数有两个参数 一个指的是 resolve，另一个叫做 reject
+6. resolve 是一个函数，调用此函数，可以把等待状态的Promise变成成功的Promise
+7. reject 是一个函数，调用此函数，可以把等待状态的Promise变成失败的Promise
+8. Promise 三个状态：等待状态 成功状态 失败状态
+9. [[PromiseState]]:"pending" 等待的意思
+10. Promise只能从等待到失败或者从等待到成功 一旦失败就不能成功了 一旦成功就不能失败了
+
+
+
+成功状态
+<script>
+  //   在执行器中写异步代码
+  let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    // 成功是成功的结果，叫终值
+      resolve("成功~");
+    //   Promise {<fulfilled>: '成功~'}
+      console.log(p);
+    }, 3000);
+  });
+  console.log(p);
+</script>
+
+失败状态
+<script>
+  //   在执行器中写异步代码
+  let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+    // 失败是失败的结果，叫拒因
+      reject("失败~");
+    //   Promise {<rejected>: '失败~'}
+      console.log(p);
+    }, 3000);
+  });
+  console.log(p);
+</script>
+
+
+

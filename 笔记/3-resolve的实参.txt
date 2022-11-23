@@ -1,0 +1,65 @@
+1) resolve的实参，可以是普通数据
+    resolve("成功");
+    resolve([1,2]);
+
+
+
+
+2）resolve的实参，可以是一个promise对象,
+    promise是成功还是失败，取决于p，成功的结果。就取决于p成功的结果
+        resolve(p)
+        let p = new Promise((resolve,reject)=>{
+            // setTimeout(()=>{
+            //     // resolve("p的成功");
+            //     // reject("p的失败");
+            // },2000)
+        })
+
+
+3) 参数是thenable（对象，此对象中有一个then方法）
+    promise 是成功还是失败，取决于thenable是成功还是失败
+        resolve({
+                then(resolve,reject){
+                    // resolve("thenable成功");
+                    reject("thenable失败");
+                }
+            })
+
+
+
+
+
+<script>
+// resolve实参
+let p = new Promise((resolve,reject)=>{
+    // setTimeout(()=>{
+    //     // resolve("p的成功");
+    //     // reject("p的失败");
+    // },2000)
+})
+    let promise = new Promise((resolve,reject)=>{
+    // 1) resolve的实参，可以是普通数据
+        // resolve("成功");
+        // resolve([1,2]);
+
+    // 2）resolve的实参，可以是一个promise对象,
+    // promise是成功还是失败，取决于p，成功的结果。就取决于p成功的结果
+    // resolve(p)
+
+    // 3)参数是thenable（对象，此对象中有一个then方法）
+    // promise 是成功还是失败，取决于thenable是成功还是失败
+        resolve({
+            then(resolve,reject){
+                // resolve("thenable成功");
+                reject("thenable失败");
+            }
+        })
+    })
+    promise.then((res)=>{
+        console.log('res '+ res);
+        
+    },err=>{
+        console.log('err '+err);
+        
+    })
+</script>
