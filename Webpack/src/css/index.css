@@ -1,0 +1,7 @@
+.box {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  background-image: url(../images/诸葛亮3.png);
+  background-size: cover;
+}

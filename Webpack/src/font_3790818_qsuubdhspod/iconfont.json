@@ -1,0 +1,37 @@
+{
+  "id": "3790818",
+  "name": "webpacktest",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "33019201",
+      "name": "汇智学院",
+      "font_class": "huizhixueyuan",
+      "unicode": "e711",
+      "unicode_decimal": 59153
+    },
+    {
+      "icon_id": "33019202",
+      "name": "房源列表",
+      "font_class": "fangyuanliebiao",
+      "unicode": "e710",
+      "unicode_decimal": 59152
+    },
+    {
+      "icon_id": "33019203",
+      "name": "会议预定",
+      "font_class": "huiyiyuding",
+      "unicode": "e712",
+      "unicode_decimal": 59154
+    },
+    {
+      "icon_id": "33019205",
+      "name": "科技产业服务",
+      "font_class": "kejichanyefuwu",
+      "unicode": "e713",
+      "unicode_decimal": 59155
+    }
+  ]
+}
